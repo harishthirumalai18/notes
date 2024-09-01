@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.dark-mode {
+  background-color: black;
+  filter: brightness(65%);
+  transition: all ease .6s;
+}
+
+.App {
+  min-height: 100vh;
+  max-width: 950px;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease .6s;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.dark-mode h1 {
+  color: rgb(169, 169, 169);
+}
+
+.header button {
+  height: 2.2rem;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
+.header button:hover {
+  background-color: #e6e6e6;
+}
+
+.search {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.dark-mode .search-icon {
+  color: white;
+}
+
+input {
+  height: 1.4rem;
+  width: 12rem;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  border: none;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.notes-list {
+  display: grid;
+  grid-auto-flow: row dense;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.note.new {
+  background-color: rgb(219, 238, 255);
+  max-width: 500px;
+}
+.note.new:hover {
+  background-color: rgb(185, 214, 247);
+}
+.note.new:hover textarea {
+  background-color: rgb(185, 214, 247);
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: rgb(219, 238, 255);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.note {
+  border-radius: 10px;
+  background-color: #f6d140;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  padding: 1em;
+}
+.note:hover {
+  background-color: rgb(241, 200, 35);
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-btn {
+  border-radius: 10px;
+  border: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+
+.delete-btn {
+  cursor: pointer;
+}
+
